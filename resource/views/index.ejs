@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+
+<body>
+  <div class="flex">
+    <div>
+      <p>请输入删除秘钥</p>
+      <p><input type="password"></p>
+      <p> <button class="yes">确定</button> <button class="no">取消</button></p>
+    </div>
+
+  </div>
+  <div class="wrapper">
+    <header class="header">
+      <h3>详情列表</h3>
+      <ul>
+        <li>编号</li>
+        <li>姓名</li>
+        <li>详情</li>
+        <li>修改</li>
+      </ul>
+    </header>
+    <main class="main">
+
+      <!-- <ul>
+        <li>0</li>
+        <li>徐国鑫</li>
+        <li><button>详情</button></li>
+        <li><button>删除</button></li>
+      </ul>
+      <ul>
+        <li>1</li>
+        <li>桑荣荣</li>
+        <li><button>详情</button></li>
+        <li><button>删除</button></li>
+      </ul> -->
+      <%data.forEach((tiem,index)=>{%>
+      <ul>
+        <li>
+          <%=index+1%>
+        </li>
+        <li>
+          <%=tiem.name%>
+        </li>
+        <li><button data-id="<%=tiem._id%>">详情</button></li>
+        <li><button data-id="<%=tiem._id%>">删除</button></li>
+      </ul>
+      <%})%>
+    </main>
+    <footer class="footer">
+      <button class="adds">添加信息</button>
+    </footer>
+
+  </div>
+
+
+</body>
+<script src="/common/axios.js"></script>
+<script src="/javascripts/index.js"></script>
+
+</html>
