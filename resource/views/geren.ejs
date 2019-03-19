@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        div{
+            width: 100%;
+        }
+        div p{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #ccc;
+        }
+        div p input{
+            /* border:1px solid #000; */
+            border:none;
+            outline: none;
+        }
+        div p b{
+            display: inline-block;
+            width: 30%;
+            text-align: right;
+        }
+
+        .ps{
+            width: 100%;
+            text-align: center;
+            margin:20px 0;
+        }
+        .ps button{
+            width: 30%;
+            height: 30px;
+        }
+    h2{
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+    }
+    </style>
+</head>
+
+<body>
+    <h2> 信息登录表</h2>
+    <div>
+
+        <p><b>姓名：</b><input type="text" name="name" class="inps"></p>
+        <p><b>年龄：</b><input type="number" name="age" class="inps"></p>
+        <p><b>性别：</b><input type="radio" name="sex" value="0" checked>男
+            <input type="radio" name="sex" value="1">女</p>
+        <p><b>学院：</b><input type="text" name="coll" class="inps"></p>
+        <p><b>宿舍号：</b><input type="number" name="dorm" class="inps"></p>
+        <p><b>个人电话：</b><input type="number" name="tel" class="inps"></p>
+        <p><b>家长电话：</b><input type="number" name="tels" class="inps"></p>
+        <p><b>家庭住址：</b><input type="text" name="address" class="inps"></p>
+        <p><b>删除秘钥：</b><input type="password" name="password" class="inps"></p>
+        <p>为了防止他（她）人删除信息请添加 删除秘钥</p>
+
+    </div>
+    <p class="ps"><button class="add">确认</button><button class="clear">返回</button></p>
+
+</body>
+<script src="/common/axios.js"></script>
+<script src="/javascripts/geren.js"></script>
+
+</html>
